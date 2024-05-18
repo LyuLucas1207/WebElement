@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'LinHaiLiShu';
+    src: url('../font/临海隶书.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'XiangCuiZiZaiShuChangHei';
+    src: url('../font/香萃自在舒畅黑.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jersey15';
+    src: url('../font/Jersey15-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FeiBoZhengDianTi';
+    src: url('../font/飞波正点体.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aosagi';
+    src: url('../font/aosagi.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'chongxi_seal';
+    src: url('../font/chongxi_seal.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-----------------------------------index.html-----------------------------------*/
+
+
+/* 定义展开动画 */
+@keyframes expandNav {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* 动画应用 */
+#section1_header.animated {
+    animation: expandNav 2s forwards; /* 动画名称，持续时间，以及确保动画停留在最后一帧 */
+}
+
+/*-----------------------------------nav-----------------------------------*/
+
+#section1_header{
+    display: flex;/* make the container flex, this is make inner elements flex items */
+    justify-content: center;/* center the content */
+    align-items: center;/* center the content */
+    width: 60%;/* make the container full width of the viewport */
+    /* height: 100vh;make the container full height of the viewport */
+}
+
+#section1_icon {
+    position: absolute; /* 绝对定位，使图标脱离文档流 */
+    margin: 10px;
+    padding: 10px;
+    height: 60px; /* 与导航栏的高度一致 */
+    width: 60px; /* 使图片呈现正方形 */
+    align-items: center; /* 垂直居中图片 */
+    justify-content: center; /* 水平居中图片 */
+    left: 50%;            /* 首先相对于中点定位 */
+    transform: translateX(-100%); /* 然后向左平移自身宽度的一半，确保完全在导航栏左侧 */
+    top: 50%;             /* 垂直居中 */
+    transform: translateY(-130%);  /* 向上平移自身高度的一半 */
+}
+
+#section1_icon img {
+    height: 100%; /* 图片高度完全填充容器 */
+    width: auto; /* 宽度自动以保持图片比例不变 */
+}
+
+#section1_nav ul{
+    position: relative;/* make the ul relative to the container */
+    border: none;/* remove the border */
+    border-radius: 10em;/* make the border radius, em means relative to the font-size of the element */
+    display: flex;/* make the ul flex */
+    list-style: none;/* remove the list style */
+    background: #ffffffd6;
+    box-shadow: 10px 20px 20px #b3b3b39b;
+    padding: 10px;
+    align-items: center; /* 确保导航项垂直居中 */
+    height: 60px; /* 设置固定高度 */
+    
+}
+
+#section1_nav li a{
+    position: relative;/* make the li relative to the ul */
+    padding: 15px 50px;/* add padding */
+    font: 500 24px 'aosagi';/* add font */
+    border: none;/* remove the border */
+    outline: none;/* remove the outline */
+    color: #000000;/* add color */
+    display: inline-block;/* make the li inline block */
+    text-decoration: none;/* remove the text decoration */
+    z-index: 3;/* add z-index */
+}
+
+.section1_slide1,
+.section1_slide2{
+    position: absolute;/* make the slides absolute */
+    display: inline-block;/* make the slides inline block */
+    height: 60px;/* make the slides full height */
+    border-radius: 10em;/* make the border radius */
+    transition: all 0.6s cubic-bezier(0.23,1,0.23,1.05);/* add transition, all means all properties, 0.6s is the duration, cubic-bezier is the timing function */
+}
+
+.section1_slide1{
+    background: rgb(216, 235, 219);/* add background */
+    z-index: 2;/* add z-index */
+}
+
+.section1_slide2{
+    background: rgba(214, 255, 219, 0.642);/* add background */
+    z-index: 1;/* add z-index */
+    box-shadow: 0 0 20px #ffffffaa inset;/* add box shadow, inset means inside */
+}
+
+.section1_squeeze{
+    transform: scale(0.9);/* make the element scale */
+}
+
+#section1_footer{
+    display: flex;/* make the container flex */
+    justify-content: center;/* center the content */
+    align-items: center;/* center the content */
+    font: 500 50px 'aosagi';/* add font */
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 100%);/* add background */
+    overflow: hidden;/* hide the overflow */
+}
+
+#section1_footer h1{
+    /* writing-mode: vertical-rl;make the text vertical */
+    /* transform: rotate(180deg);rotate the text */
+    font-family: 'FeiBoZhengDianTi';
+    vertical-align: top;
+}
+
+#section1 {
+    padding: 0;
+    margin: 0;
+    font-family: 'aosagi';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    overflow: hidden;
+    transition: background-image 0.7s ease-in-out;
+}
+
+
+/*-----------------------------------nav-----------------------------------*/
+/*-----------------------------------index.html-----------------------------------*/

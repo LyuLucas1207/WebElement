@@ -1,0 +1,227 @@
+/* 容器样式 */
+.section12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    /* 背景颜色 */
+    margin: 5% 5% 5% 5%;
+    /* 上右下左 */
+}
+
+.section12_card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* max-width: 1200px; */
+    /* margin-top: 20px; */
+}
+
+.section12_category {
+    margin: 3vh;
+    width: 100%;
+}
+
+.section12_title h1 {
+    color: #000000;
+    /* 标题颜色 */
+    font-size: 3vh;/*for chinese browser*/
+    font-size: calc(1vw + 2.5vh);
+}
+
+.section12_title p {
+    font-size: 1.2vh;/*for chinese browser*/
+    font-size: calc(1vw + 0.8vh);
+    color: #232323;
+    /* 副标题颜色 */
+    margin-top: 1vh;
+}
+
+
+/* 卡片样式 */
+.section12_cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section12_card {
+    position: relative;
+    flex: 1 1 15vw;
+    /* 25vh is the initial width, 15vh is the minimum width */
+    min-height: 10vh;
+    border-radius: 1vh;
+    background-color: #fff;
+    margin: 1.5625vh;
+    /* 1.5625vh is 1/64 of 100vh */
+    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+}
+
+.section12_card {
+    width: 35vh;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*set max number of card in a row*/
+}
+
+.section12_loader {
+    position: absolute;
+    /* 让加载指示器覆盖在图片上面 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    /* 可选：添加半透明背景提高可见性 */
+    z-index: 2;
+    /* 确保它在图片上面 */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.section12_card .loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+.section12_card:hover {
+    transform: scale(1.2) translateY(-1vh);
+    /* 悬浮效果 */
+}
+
+.section12_card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* padding: 15px; */
+    width: 85%;
+    margin: 2vh;
+}
+
+
+
+.section12_card a img {
+    width: 100%;
+    /* 图片宽度占满卡片宽度 */
+    height: 100%;
+    max-height: 19vh;/*for chinese browser*/
+    max-height:calc(9vw + 15vh);
+    object-fit: cover;
+    /* cover 意思是保持图片比例不变，填充整个div，可能会有部分图片被裁剪 */
+    /* fill 意思是保持图片比例不变，填充整个div，不会有图片被裁剪，但是可能会有部分div不被图片填满 */
+    /* contain 意思是保持图片比例不变，不会有图片被裁剪，但是可能会有部分div不被图片填满 */
+    /* none 意思是不保持图片比例，填充整个div */
+    border-radius: 1vh 1vh 0 0;
+    /* 图片上边框圆角 */
+    border-bottom: 1px solid #eee;
+    /* 细微的分隔线 */
+    margin-top: 2vh;
+}
+
+.section12_card_text {
+    margin: 0%;
+}
+
+.section12_card_text h3 {
+    margin-top: 1vh;
+    font-size: 1.8vh;/*for chinese browser*/
+    font-size: calc(0.5vw + 1.5vh);
+    color: #111010;
+}
+
+.section12_card_text p {
+    font-size: 1.2vh;/*for chinese browser*/
+    font-size: calc(0.3vw + 1vh);
+    color: #666;
+    margin: 0%;
+    /* line-height: 1.5;行高 */
+    /* text-align: center; */
+}
+
+.section12_card_text p:first-child {
+    margin-top: 0.3vh;
+}
+.section12_card_text p:last-child {
+    color: #000000;
+    margin-bottom: 1vh;
+}
+
+.section12_modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.section12_modal::-webkit-scrollbar {
+    display: none;
+}
+
+.section12_modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 2vh;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 70vh;
+    transform: translate(0%, 8vh);/*for chinese browser*/
+    transform: translate(0%, calc(-50% + 40vh - 10vw));
+    border-radius: 3vh;
+    
+}
+
+.section12_close {
+    color: #aaa;
+    float: right;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.section12_modal-content h2 {
+    font-size: 2.5vh;
+    margin: 2vh 0;
+}
+
+.section12_modal-content p {
+    font-size: 1.6vh;
+    line-height: 1.6;
+    margin: 1vh 0;
+}
+
+.section12_modal-content p:last-child {
+    margin-bottom: 5vw;
+}
+
+.section12_close:hover,
+.section12_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.section12_modal-content img {
+    width: 100%;
+    height: auto;
+}
