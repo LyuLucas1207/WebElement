@@ -235,6 +235,34 @@
 }
 
 
+/* img container 15.1 */
+.section15_image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* 确保图片溢出隐藏 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#section15_image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* transition: transform 0.5s ease, opacity 0.5s ease; */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.section15_hidden {
+    display: none;
+}
+
+
 
 @keyframes slideInFromLeft {
     0% {
