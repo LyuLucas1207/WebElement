@@ -197,3 +197,101 @@
     width: 100%;
     height: auto;
 }
+
+/* 样式省略，保留之前的样式 */
+.section15_arrow {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 1.5vh;
+    margin: 1vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 20%;
+    top: 40%;
+    transform: translateY(50%);
+    z-index: 10;
+}
+
+.section15_arrow:hover {
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.5s;
+    transform: scale(1.2) translateY(20%);
+}
+
+
+#section15_prev-image {
+    left: 1vh;
+    background-image: url("../pic/arrow/LA_white.png");
+}
+
+#section15_next-image {
+    right: 1vh;
+    background-image: url("../pic/arrow/RA_white.png");
+
+}
+
+
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.section15_slide-in-left {
+    animation: slideInFromLeft 0.5s forwards;
+}
+
+.section15_slide-in-right {
+    animation: slideInFromRight 0.5s forwards;
+}
+
+.section15_slide-out-left {
+    animation: slideOutToLeft 0.5s forwards;
+}
+
+.section15_slide-out-right {
+    animation: slideOutToRight 0.5s forwards;
+}
