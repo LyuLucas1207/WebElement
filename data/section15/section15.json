@@ -1,39 +1,55 @@
 {
     "Locations":[
         {
-            "CpmpanyName":"Company 1",
+            "CompanyName":"Company 1",
             "Name":"Location 1",
             "SpecificLocation":"湖北省武汉市洪山区珞狮南路",
             "Founded":"2019-01-01",
-            "Image":"./pic/company/locations/location1.jpg"
+            "Image":"./pic/company/locations/location1.jpg",
+            "ImageDetail":"./pic/company/location1/l1.jpg",
+            "Description":"This is a description of the location.",
+            "Contact":"1234567890"
+
         },
         {
-            "CpmpanyName":"Company 2",
+            "CompanyName":"Company 2",
             "Name":"Location 2",
             "SpecificLocation":"湖北省长沙市岳麓区麓山南路",
             "Founded":"2020-01-01",
-            "Image":"./pic/company/locations/location2.jpg"
+            "Image":"./pic/company/locations/location2.jpg",
+            "ImageDetail":"./pic/company/location2/l2.jpg",
+            "Description":"This is a description of the location.",
+            "Contact":"1234567890"
         },
         {
-            "CpmpanyName":"Company 3",
+            "CompanyName":"Company 3",
             "Name":"Location 3",
             "SpecificLocation":"河南省郑州市金水区农业路",
             "Founded":"2024-01-01",
-            "Image":"./pic/company/locations/location3.jpg"
+            "Image":"./pic/company/locations/location3.jpg",
+            "ImageDetail":"./pic/company/location3/l3.jpg",
+            "Description":"This is a description of the location.",
+            "Contact":"1234567890"
         },
         {
-            "CpmpanyName":"Company 4",
+            "CompanyName":"Company 4",
             "Name":"Location 4",
             "SpecificLocation":"广东省广州市天河区天河路",
             "Founded":"2021-01-01",
-            "Image":"./pic/company/locations/location4.jpg"
+            "Image":"./pic/company/locations/location4.jpg",
+            "ImageDetail":"./pic/company/location4/l4.jpg",
+            "Description":"This is a description of the location.",
+            "Contact":"1234567890"
         },
         {
-            "CpmpanyName":"Company 5",
+            "CompanyName":"Company 5",
             "Name":"Location 5",
             "SpecificLocation":"浙江省杭州市西湖区文三路",
             "Founded":"2022-01-01",
-            "Image":"./pic/company/locations/location5.jpg"
+            "Image":"./pic/company/locations/location5.jpg",
+            "ImageDetail":"./pic/company/location5/l5.jpg",
+            "Description":"This is a description of the location.",
+            "Contact":"1234567890"
         }
     ]
 }
