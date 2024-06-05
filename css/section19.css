@@ -1,3 +1,122 @@
-.section19{
+.section19 * {
+    padding: 0vh;
+    margin: 0vh;
+    list-style: none;
+    bottom: 0;
+    text-decoration: none;
+}
+.section19 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(170, 190, 250);
+}
+.section19_shell {
+    width: 90vh;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1vh #fff solid;
+    box-shadow: 2vh 3vh 2vh rgba(0, 0, 0, 0.5);
+}
+
+.section19_images {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: left 0.5s ease-in-out; /* 添加过渡效果 */
+}
+
+.section19_img{
+    width: 100%;
+    background-size: cover;
     
+}
+.section19_img:nth-child(1){
+    background-image: url("../pic/pic1.jpeg");
+}
+.section19_img:nth-child(2){
+    background-image: url("../pic/pic3.jpeg");
+}
+.section19_img:nth-child(3){
+    background-image: url("../pic/pic2.jpeg");
+}
+
+.section19_min-images {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 2vh;
+    width: 40%;
+    z-index: 999;
+    right: 10%;
+}
+
+.section19_min{
+    width: 6vh;
+    height: 6vh;
+    cursor: pointer;
+    border-radius: 50%;
+    background-size: cover;
+    border: solid rgba(255, 255, 255, 0.5) 5px;
+    background-position: -2vh 0;
+}
+.section19_min:nth-child(1){
+    background-image: url("../pic/pic1.jpeg");
+}
+.section19_min:nth-child(2){
+    background-image: url("../pic/pic3.jpeg");
+}
+.section19_min:nth-child(3){
+    background-image: url("../pic/pic2.jpeg");
+}
+
+.section19_button {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select:none;
+}
+
+.section19_button-left,
+.section19_button-right {
+    font-size: 5vh;
+    background-color: rgba(160, 193, 255, 0.7);
+    padding: 0 2vh;
+    cursor: pointer;
+    line-height: 50vh;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .section19_shell {
+        width: 90vw; /* 缩小整体宽度 */
+        height: 50vw; /* 缩小整体高度，保持比例 */
+    }
+
+    .section19_images {
+        width: 300%;
+        height: 100%;
+    }
+
+    .section19_img {
+        width: 100%;
+    }
+
+    .section19_min {
+        width: 5vw; /* 调整小图片宽度 */
+        height: 5vw; /* 调整小图片高度 */
+    }
+
+    .section19_button-left,
+    .section19_button-right {
+        font-size: 4vw; /* 调整按钮字体大小 */
+        line-height: 50vw; /* 调整按钮行高，保持比例 */
+    }
 }

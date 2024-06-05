@@ -1,3 +1,76 @@
-.section16{
-    
+.section16 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffaff;
+    width: 100vw;
+}
+
+.section16_outer {
+    display: grid;
+    gap: 2vh;
+    grid-template-columns: repeat(3, 30vh);
+    overflow-y: hidden;
+    overflow: hidden;
+    padding: 5vh;
+    width: 90vw;
+    justify-content: center;
+}
+
+.section16_colume {
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    width: 30vh;
+}
+
+.section16_colume:nth-child(1),
+.section16_colume:nth-child(3) {
+    /* 应用平滑的动画 */
+    animation: scroller linear;
+    /* 动画根据滚动进行 */
+    animation-timeline: scroll(root);
+    /* 子元素反转排列 */
+    flex-direction: column-reverse;
+    /* 初始位置设置为底部 */
+    translate: 0% calc(-100% + 100vh);
+}
+
+.section16_colume img {
+    box-shadow: 0 0 10px #0002;
+    border-radius: 1vh;
+    transition: .3s;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+
+}
+
+.section16_colume img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(150, 50, 50, 0.5);
+}
+
+@keyframes scroller {
+    to {
+        /* 最终位置设置为顶部 */
+        translate: 0% calc(100% - 100vh);
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .section16_outer {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100vw; /* 确保布局占满屏幕宽度 */
+        gap: 1vh; /* 减少间隙以适应较小屏幕 */
+    }
+
+    .section16_colume {
+        width: 100%;
+    }
+
+    .section16_colume img {
+        height: 15vh; /* 调整图片高度以适应小屏幕 */
+    }
 }

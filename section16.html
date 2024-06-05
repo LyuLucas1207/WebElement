@@ -4,103 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>山羊の前端小窝</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fffaff;
-        }
-
-        main {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(3, 500px);
-            overflow-y: hidden;
-            padding: 50px;
-            width: 100%;
-            justify-content: center;
-        }
-
-        section {
-            display: flex;
-            gap: 2rem;
-            flex-direction: column;
-        }
-
-        section:nth-child(1),
-        section:nth-child(3) {
-            /* 应用平滑的动画 */
-            animation: scroller linear;
-            /* 动画根据滚动进行 */
-            animation-timeline: scroll(root);
-            /* 子元素反转排列 */
-            flex-direction: column-reverse;
-            /* 初始位置设置为底部 */
-            translate: 0% calc(-100% + 100vh);
-        }
-
-        section img {
-            box-shadow: 0 0 10px #0002;
-            border-radius: 5px;
-            transition: .3s;
-            width: 100%;
-            height: 30vh;
-            object-fit: cover;
-
-        }
-
-        section img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(150, 50, 50, 0.5);
-        }
-
-        @keyframes scroller {
-            to {
-                /* 最终位置设置为顶部 */
-                translate: 0% calc(100% - 100vh);
-            }
-        }
-    </style>
+    <title>doc</title>
+    <link rel="stylesheet" href="./css/section16.css">
 </head>
 
 <body>
-    <main>
-        <section>
-            <img loading="lazy" src="./pic/pic1.jpeg "/>
-            <img loading="lazy" src="./pic/pic2.jpeg "/>
-            <img loading="lazy" src="./pic/pic3.jpeg "/>
-            <img loading="lazy" src="./pic/pic4.jpeg "/>
-            <img loading="lazy" src="./pic/pic5.jpeg "/>
-            <img loading="lazy" src="./pic/pic6.jpeg "/>
-            <img loading="lazy" src="./pic/pic7.jpeg "/>
-        </section>
-        <section>
-            <img loading="lazy" src="./pic/pic11.jpeg" />
-            <img loading="lazy" src="./pic/pic12.jpeg" />
-            <img loading="lazy" src="./pic/pic18.jpeg" />
-            <img loading="lazy" src="./pic/pic14.jpeg" />
-            <img loading="lazy" src="./pic/pic15.jpeg" />
-            <img loading="lazy" src="./pic/pic16.jpeg" />
-            <img loading="lazy" src="./pic/pic17.jpeg" />
-        </section>
-        <section>
-            <img loading="lazy" src="./pic/pic21.jpeg" />
-            <img loading="lazy" src="./pic/pic22.jpeg" />
-            <img loading="lazy" src="./pic/pic23.jpeg" />
-            <img loading="lazy" src="./pic/pic24.jpeg" />
-            <img loading="lazy" src="./pic/pic25.jpeg" />
-            <img loading="lazy" src="./pic/pic26.jpeg" />
-            <img loading="lazy" src="./pic/pic27.jpeg" />
-        </section>
-
-    </main>
+    <div class="section16">
+        <div class="section16_outer">
+            <div class="section16_colume">
+                <img loading="lazy" src="./pic/pic1.jpeg "/>
+                <img loading="lazy" src="./pic/pic2.jpeg "/>
+                <img loading="lazy" src="./pic/pic3.jpeg "/>
+                <img loading="lazy" src="./pic/pic4.jpeg "/>
+                <img loading="lazy" src="./pic/pic5.jpeg "/>
+                <img loading="lazy" src="./pic/pic6.jpeg "/>
+                <img loading="lazy" src="./pic/pic7.jpeg "/>
+            </div>
+            <div class="section16_colume">
+                <img loading="lazy" src="./pic/pic11.jpeg" />
+                <img loading="lazy" src="./pic/pic12.jpeg" />
+                <img loading="lazy" src="./pic/pic18.jpeg" />
+                <img loading="lazy" src="./pic/pic14.jpeg" />
+                <img loading="lazy" src="./pic/pic15.jpeg" />
+                <img loading="lazy" src="./pic/pic16.jpeg" />
+                <img loading="lazy" src="./pic/pic17.jpeg" />
+            </div>
+            <div class="section16_colume">
+                <img loading="lazy" src="./pic/pic21.jpeg" />
+                <img loading="lazy" src="./pic/pic22.jpeg" />
+                <img loading="lazy" src="./pic/pic23.jpeg" />
+                <img loading="lazy" src="./pic/pic24.jpeg" />
+                <img loading="lazy" src="./pic/pic25.jpeg" />
+                <img loading="lazy" src="./pic/pic26.jpeg" />
+                <img loading="lazy" src="./pic/pic27.jpeg" />
+            </div>
+        </div>
+    </div>
 </body>
 
 </html> 

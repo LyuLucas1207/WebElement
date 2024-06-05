@@ -1,3 +1,124 @@
-.section22{
-    
+.section22 * {
+    padding: 0;
+    margin: 0;
+}
+
+.section22 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(243, 230, 241);
+}
+
+.section22_shell {
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap; /* 在小屏幕上允许换行 */
+    justify-content: center; /* 水平居中对齐 */
+}
+
+.section22_box {
+    flex: 1;
+    overflow: hidden;
+    transition: flex-basis .5s;
+    margin: 1vh;
+    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, .5);
+    border-radius: 2vh;
+    border: 1vh solid #fff;
+    background-color: #fff;
+    transform: scale(0.9);
+    /* 初始化scale */
+}
+
+.section22_box>img {
+    width: 200%;
+    height: 85%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.section22_box>span {
+    text-align: center;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height .5s ease, opacity .5s ease, margin .5s ease;
+    font-size: 3vh;
+    /* 过渡效果 */
+    opacity: 1;
+    /* 初始不透明 */
+}
+
+.section22_box:hover {
+    flex-basis: 40%;
+    transform: scale(1.05);
+    /* 鼠标悬停时扩大 */
+}
+
+.section22_box:hover>img {
+    transform: scale(1.05);
+    /* 图片也相应放大 */
+    height: 60vh;
+}
+
+.section22_box:hover>span {
+    display: none;
+    opacity: 0;
+    /* 使文字透明 */
+    height: 0;
+    /* 高度变为0 */
+    margin: 0;
+    /* 边距变为0 */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .section22 {
+        height: auto;
+        padding: 2vh 0;
+    }
+
+    .section22_shell {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .section22_box {
+        width: 90%;
+        margin: 2vh 0;
+        transform: scale(1); /* 移除缩放效果 */
+    }
+
+    .section22_box:hover {
+        flex-basis: auto;
+        transform: scale(1); /* 移除悬停缩放效果 */
+    }
+
+    .section22_box>img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .section22_box:hover>img {
+        transform: scale(1);
+        height: auto;
+    }
+
+    .section22_box>span {
+        height: auto;
+        opacity: 1;
+    }
+
+    .section22_box:hover>span {
+        display: flex;
+        opacity: 1;
+        height: auto;
+        margin: 0;
+    }
 }
