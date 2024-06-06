@@ -1,0 +1,58 @@
+[
+    {
+        "category": "Living",
+        "title": "How to Use Facial Expressions in Public Speaking",
+        "date": "11 Dec 2030",
+        "views": 383,
+        "image": "./pic/pic1.jpeg"
+    },
+    {
+        "category": "Relationships",
+        "title": "Easy Ways to Provide Emotional Support for Your Partner",
+        "date": "11 Aug 2030",
+        "views": 59,
+        "image": "./pic/pic2.jpeg"
+    },
+    {
+        "category": "Career",
+        "title": "The State of Remote Work: Statistics, Benefits, and Trends",
+        "date": "2 Apr 2030",
+        "views": 236,
+        "image": "./pic/pic3.jpeg"
+    },
+    {
+        "category": "Living",
+        "title": "How to Use Facial Expressions in Public Speaking",
+        "date": "11 Dec 2030",
+        "views": 383,
+        "image": "./pic/pic4.jpeg"
+    },
+    {
+        "category": "Relationships",
+        "title": "Easy Ways to Provide Emotional Support for Your Partner",
+        "date": "11 Aug 2030",
+        "views": 59,
+        "image": "./pic/pic5.jpeg"
+    },
+    {
+        "category": "Career",
+        "title": "The State of Remote Work: Statistics, Benefits, and Trends",
+        "date": "2 Apr 2030",
+        "views": 236,
+        "image": "./pic/pic6.jpeg"
+    },
+    {
+        "category": "Living",
+        "title": "How to Use Facial Expressions in Public Speaking",
+        "date": "11 Dec 2030",
+        "views": 383,
+        "image": "./pic/pic7.jpeg"
+    },
+    {
+        "category": "Relationships",
+        "title": "Easy Ways to Provide Emotional Support for Your Partner",
+        "date": "11 Aug 2030",
+        "views": 59,
+        "image": "./pic/pic8.jpeg"
+    }
+]
