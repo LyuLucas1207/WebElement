@@ -48,11 +48,11 @@
 }
 
 .section27_box:nth-child(2)::before{
-    background: linear-gradient(315deg, #ff0000, #00ff00);
+    background: linear-gradient(315deg, #ffffff, #00ff00);
 }
 .section27_box:nth-child(2)::after{
-    background: linear-gradient(315deg, #00ff00, #0000ff);
-    animation-delay: -5s;
+    background: linear-gradient(315deg, #001eff, #ff0000);
+    animation-delay: -2.5s;
 }
 
 .section27_box:nth-child(3)::before{
@@ -72,8 +72,6 @@
     inset: -80px 100px;
     animation: animate 5s linear infinite reverse;
 } */
-
-
 
 
 .section27_box:hover::after,
