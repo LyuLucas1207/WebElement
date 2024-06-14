@@ -1,0 +1,161 @@
+.section28{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: pink;
+    border-radius: 1vh;
+}
+
+.section28 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section28_navbar{
+    list-style: none;
+    border-radius: 1vh;
+}
+
+.section28_navbar ul{
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.section28_navbar ul li{
+    display: inline-block;
+    color: #333;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 35px;
+    position: relative;
+    font-size: 28px;
+    width: max-content;
+    height: max-content;
+}
+
+.section28_navbar ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 28px;
+}
+.section28_icon:first-child{
+    margin-right: 100px;
+    margin-left: 20px;
+}
+.section28_navbar ul li a img{
+    width: 28px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide nested ul by default */
+
+.section28_innerul{
+    display: none;
+    width: max-content;
+}
+
+.section28_navbar ul li:hover{
+    cursor: pointer;
+    background: coral;
+    color: pink;
+    border-radius: 1vh;
+    transition: 0.1s ease-in-out;
+}
+
+.section28_navbar ul li:hover a{
+    /* display: block;
+    position: absolute;
+    background: coral;
+    color: white;
+    border-radius: 1vh;
+    padding: 1vh;
+    margin-top: 1vh;
+    transition: 0.5s ease-in-out; */
+    color: pink;
+    transition: 0.1s ease-in-out;
+}
+
+/* Nested dropdown show on hover */
+.section28_navbar ul li:hover .section28_innerul{
+    display: block;
+    position: absolute;
+    left: 0;
+    margin-top: 1vh;
+}
+
+.section28_navbar ul li:hover .section28_innerul li{
+    display: block;
+    background: pink;
+    width: 200px;
+}
+.section28_navbar ul li:hover .section28_innerul li:first-child{
+    border-radius: 1vh 1vh 0 0;
+}
+.section28_navbar ul li:hover .section28_innerul li:last-child{
+    border-radius: 0 0 1vh 1vh;
+}
+
+.section28_navbar ul li:hover .section28_innerul li:hover{
+    background: white;
+    color: inherit;
+    transition: 0.1s ease-in-out;
+}
+
+.section28_navbar ul li:hover .section28_innerul li a{
+    color: #333;
+    font-size: 16px;
+    
+}
+
+.section28_navbar ul li:hover .section28_innerul li div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.section28_navbar ul li:hover .section28_innerul li span{
+    text-align: center;
+    color: #fff;
+    background: coral;
+    padding: 0.2vh 0.5vh;
+    text-align: center;
+    font-size: 9px;
+    border-radius: 1vh;
+}
+
+.section28_navbar ul li:hover .section28_innerul li:hover span {
+    background: chocolate;
+}
+
+@media screen and (max-width: 800px){
+    
+    .section28_navbar ul li{
+        display: block;
+        width: 100%;
+    }
+    .section28_icon:first-child{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .section28_navbar ul li:hover .section28_innerul{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-top: 1vh;
+    }
+    .section28_navbar ul li:hover .section28_innerul li{
+        display: block;
+        background: pink;
+        width: 100%;
+    }
+    
+    .section28_navbar ul li:hover .section28_innerul li:hover{
+        background: white;
+        color: inherit;
+        transition: 0.1s ease-in-out;
+        border-radius: 0;
+    }
+}
