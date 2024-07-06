@@ -24,7 +24,9 @@
 
 function smoothScrollToTop(duration) {
     let start = null;
-    const initialPos = window.pageYOffset;  // 获取当前页面的滚动位置
+    // const initialPos = window.pageYOffset;  
+    // 获取当前页面的滚动位置
+    const initialPos = window.scrollY || window.pageYOffset;  // 兼容不同浏览器
     const target = 0;  // 目标位置顶部，即0
 
     // 运行动画的步骤

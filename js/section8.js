@@ -87,23 +87,30 @@ document.addEventListener("DOMContentLoaded", function() {
             let size = data.sliders.length;
             container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
             data.sliders.forEach(slider => {
-                let index  = 1;
                 const slide = document.createElement('div');
                 slide.className = 'section8_slide';
-                slide.innerHTML = `
-                    <div class="section8_card">
-                        <a href="${slider.url_a}#${slider.category}">
-                            <img src="${slider.img}" alt="${slider.name}"/>
-                        </a>
-                        <div>
-                            <h2>${slider.name}</h2>
-                            <p>${slider.description}</p>
-                        </div>
-                    </div>
-                `;
 
-                
+                const card = document.createElement('div');
+                card.className = 'section8_card';
 
+                const link = document.createElement('a');
+                link.href = `${slider.url_a}#${slider.category}`;
+
+                const img = document.createElement('img');
+                img.src = slider.img;
+                img.alt = slider.name;
+                link.appendChild(img);
+
+                const h2 = document.createElement('h2');
+                h2.textContent = slider.name;
+
+                const p = document.createElement('p');
+                p.textContent = slider.description;
+
+                card.appendChild(link);
+                card.appendChild(h2);
+                card.appendChild(p);
+                slide.appendChild(card);
                 container.appendChild(slide);
             });
             initSlider(); // Initialize the slider functionality
